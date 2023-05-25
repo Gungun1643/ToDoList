@@ -1,4 +1,4 @@
-# ToDoList
+# ToDoList :> 
 I'm proud to present to you a fully functional todo list website that I have developed using EJS, JavaScript, HTML, and Bootstrap. This website is designed to help you efficiently track and manage your day-to-day tasks. Here's a detailed description of its features:
 
 User Interface: The website boasts a sleek and modern user interface that is both visually appealing and intuitive to navigate. The design incorporates Bootstrap's responsive framework, ensuring a seamless experience across various devices.
