@@ -1,0 +1,39 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading">
+    <h1>
+      <%= listTitle %>
+    </h1>
+  </div>
+
+
+  <!-- 318.3 -->
+  <!-- this route is for deleting the items  -->
+  <div class="box">
+    <% newListItems.forEach(item=> { %>
+      <!-- now even if we need to delete the data -> if we click on the checkbox it should be wiped off -->
+      <form action="/delete" method="post">
+        <div class="item">
+          <!-- currently we don't have any submittting button so we cannot see what is there in the console log terminal   -->
+
+          <!-- <input type="checkbox"> -->
+          <input type ="checkbox" name="checkbox"   value="<%= item._id%>"  onChange="this.form.submit()" >
+          <p>
+            <%= item.name %>
+          </p>
+        </div>
+        <input type="hidden" name="listName" value="<%= listTitle %>">
+      </form>
+
+      <% }); %>
+ 
+
+  <!------------------------------------------------------>
+<!-- this route is for adding  the items  -->
+<!--  -->
+  <form class="item" action="/" method="post">
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type="submit" name="list" value="<%= listTitle %>">+</button>
+  </form>
+</div> 
+  <%- include("footer") -%>
